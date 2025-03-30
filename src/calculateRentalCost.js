@@ -8,12 +8,14 @@ function calculateRentalCost(days) {
   const dailyRate = 40;
   const afterSevenDaysOff = 50;
   const afterThreeDaysOff = 20;
+  const bigSaleAfter = 7;
+  const smallSaleAfter = 3;
 
-  if (days >= 7) {
+  if (days >= bigSaleAfter) {
     return dailyRate * days - afterSevenDaysOff;
   }
 
-  if (days >= 3) {
+  if (days >= smallSaleAfter) {
     return dailyRate * days - afterThreeDaysOff;
   }
 
